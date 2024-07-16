@@ -1,0 +1,17 @@
+<body>
+    <!-- update the header -->
+    <h1>Edit <%= food.name %></h1>
+    <form action="/foods/<%=food._id%>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<%= food.name %>" />
+
+      
+        <label for="isHotCold">Is food item hot?</label>
+        <input type="checkbox" name="isHotCold" <% if (food.isHotCold) { %>checked<% } %> >
+
+      
+        <button type="submit">Update Food</button>
+      </form>
+    <a href="/foods">Back to Foods</a>
+  </body>
+  
